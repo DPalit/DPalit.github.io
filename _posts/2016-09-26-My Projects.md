@@ -1,0 +1,20 @@
+
+
+## **Summary of the SAT Scores in the United States**
+
+The data presents the mean Math and Verbal scores in 51 different states in the United States. United Sates has 50 states but DC has been included as a state in the data and that changes the number of states as 51. The last column with the state abbreviation  “ALL” is not a state ; hence has not been included in numerical analysis.
+
+The data has four columns. The three columns with numeric values are “Verbal”, “Math” and “Rate”. The “State” column contains non-numeric value i.e. string type. 
+
+In CSV, all data is in type string; however, if the dataset in loaded using pandas, the data type for the “State” column is object and the data type of the numeric columns is integer. The type of the data frame is object.
+
+The minimum verbal score is 482 in DC and the maximum verbal score is 593 in IA. The minimum math score is 439 in OH and the maximum math score is 603 in IA.
+The rate has a minimum value of 4 in three states SD, ND and MS. The rate has a maximum value of 82 in CT.
+
+* The mean for math, rate and verbal is 531.84, 37 and 532.52 respectively.
+* The median for math, rate and verbal 525, 33 and 527 respectively.
+* The mode for math, rate and verbal is 499, 4 and 562 respectively.
+* The standard deviation for math, rate and verbal is 35.92, 27.27 and 33.03 respectively.
+
+The histograms for math, verbal and rate reveal that we have a non-normal distribution. In a normal distribution, the mean, median and mode values are the same. 
+The scatter plot shows that the maximum math and verbal scores are at lower rates and as the rate increases, the math and verbal scores tend to drop. Hence the scores are inversely related to the rate.
