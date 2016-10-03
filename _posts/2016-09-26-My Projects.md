@@ -1,6 +1,6 @@
 
 
-## **Summary of the SAT Scores in the United States**
+## ** Project 1: Summary of the SAT Scores in the United States**
 
 The data presents the mean Math and Verbal scores in 51 different states in the United States. United Sates has 50 states but DC has been included as a state in the data and that changes the number of states as 51. The last column with the state abbreviation  “ALL” is not a state ; hence has not been included in numerical analysis.
 
@@ -18,3 +18,10 @@ The rate has a minimum value of 4 in three states SD, ND and MS. The rate has a 
 
 The histograms for math, verbal and rate reveal that we have a non-normal distribution. In a normal distribution, the mean, median and mode values are the same. 
 The scatter plot shows that the maximum math and verbal scores are at lower rates and as the rate increases, the math and verbal scores tend to drop. Hence the scores are inversely related to the rate.
+
+## ** Project 2: Bill Board Data Analysis
+
+
+
+
+
