@@ -41,7 +41,7 @@ The data presents twelve genres of music and 317 songs. If I assume that ‘R & 
 Following are the different genres of music in the data:
 
 | Genres | Number of songs in the genre |
-|---| :---|
+|:-:|---|
 |Rock	| 103 |
 |Country	| 74 |
 |Rap	| 58 |
@@ -61,7 +61,7 @@ I have assumed that the column ‘time’ is the track time. The ‘time’ colu
 
 
 | Statistical calculations | Values |
-|---|:---|
+|:-:|---|
 |Maximum Track Time	| 7.8 |
 |Minimum Track Time	| 2.6 |
 |Mean Track Time 	| 4.2 |
@@ -74,7 +74,7 @@ If we perform an analysis of the data we see that “Independent Women Part 1”
 
 
 | Songs in the no. 1 position | Number of weeks in No. 1 position |
-|---|:---|
+|:-:|---|
 |Independent Women Part 1 | 11 |
 |Maria, Maria	| 10 |
 
@@ -85,7 +85,7 @@ Top four observations from the output has been presented in the table below:
 
 
 | Song in the top 10 position | Number of Weeks in top 10 position |
-|---|:---|
+|:-:|---|
 | Breathe | 19 |
 |Maria, Maria	| 18 |
 | Kryptonite	| 18 |
@@ -98,7 +98,7 @@ I have tried to analyze for how many weeks a song has actually been in the bill 
 
 
 | Song in the bill board | Genre | Number of Weeks |
-|---|:---|
+|:-:|---|
 |Higher	| Rock ’n’ Roll | 57 |
 |Amazed	| Country | 55 |
 |Kryptonite	| Rock | 53 |
