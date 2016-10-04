@@ -60,6 +60,9 @@ The genre ‘Rock’ is the most popular genre with 103 songs followed by ‘Cou
 I have assumed that the column ‘time’ is the track time. The ‘time’ column in the data frame is of type string and I have extracted the integer values from the column for track time calculations. The histogram of track time shows that the maximum frequency distribution is at 4 i.e. maximum number of songs have a track length of around 4 minutes.
 
 
+![](https://dpalit.github.io/images/project2_histogram.png)
+
+
 | Statistical calculations | Values |
 |:-:|---|
 |Maximum Track Time	| 7.8 |
