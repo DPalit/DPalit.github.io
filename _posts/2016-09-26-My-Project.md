@@ -28,7 +28,7 @@ The scatter plot shows that the maximum math and verbal scores are at lower rate
 
 ## ** Project 2: Bill Board Data Analysis **
 
-![](https://dpalit.github.io/images/project2_sample.png)
+
 
 Bill Board is a music industry record chart for ranking the 100 most popular songs.
 
