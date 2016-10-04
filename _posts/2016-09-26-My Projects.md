@@ -33,7 +33,7 @@ Bill Board is a music industry record chart for ranking the 100 most popular son
 
 Assumptions: 
 
-The data contains a number of empty spaces and stars (*). I have replaced the empty spaces and the stars (*) with 0.
+The data contains a number of empty spaces and stars (\*). I have replaced the empty spaces and the stars (\*) with 0.
 
 The data presents twelve genres of music and 317 songs. If I assume that ‘R & B’ and ‘R&B’ as the same genre; there are 11 different genres of music in the data. 
 
