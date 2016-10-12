@@ -1,6 +1,6 @@
 
 
-## ** Project 1: Summary of the SAT Scores in the United States**
+# ** Project 1: Summary of the SAT Scores in the United States**
 
 The data presents the mean Math and Verbal scores in 51 different states in the United States. United Sates has 50 states but DC has been included as a state in the data and that changes the number of states as 51. The last column with the state abbreviation  “ALL” is not a state ; hence has not been included in numerical analysis.
 
@@ -26,7 +26,7 @@ The scatter plot shows that the maximum math and verbal scores are at lower rate
 
 
 
-## ** Project 2: Bill Board Data Analysis **
+# ** Project 2: Bill Board Data Analysis **
 
 
 
@@ -113,6 +113,99 @@ I have tried to analyze for how many weeks a song has actually been in the bill 
 So, we can observe that  even though ‘Higher’  was never in the number 1 position in bill board it has still been in the bill board for the longest period of time i.e. 57 weeks. ‘Kryptonite’ and ‘Breadth’ are among the songs to achieve the longest run as top ten and have also been in the bill board for relatively longer.
 
 From the bill board data I would presume Breathe and Kryptonite to be the most popular songs because they have secured a position among the top ten for the most number of weeks along with being one of the longest runnings in the bill board.
+
+
+
+
+
+
+# Summary of Project 3 (Scenario 2):
+
+My model analysis is based on the 10% dataset of the Iowa liquor sales. The original data set is very large so I have chosen to work with 10% of the data set. The data had some missing values which the dataframe interpreted as NaN. I preferred to drop the NaN labels for regression analysis. So there is a possibility of some missing information.
+
+
+The data had 270955 rows and 18 columns. In trying to figure out the columns (variables) that I could use in building the model for the data, it can be observed that:
+
+* The data set had many categorical(qualitative) variables (columns)
+* Some columns (variables) were related to other columns. For e.g.
+
+    - "The State Bottle Retail" * "Bottle Sold" = "Sale (Dollars)" 
+    - "Bottle Volume" * "Bottle Sold" = "Volume Sold (liters)" or "Volume Sold (gallons)"
+
+"Item Number" and "Item Description" relate to the same product.
+"Category" and "Category Name" relate to the same item.
+
+I have chosed to build the model using quantitative variables. In my model, I have used Sale (Dollars) are the dependent variable and "State Bottle Retail", "Bottle Sold" and  "Bottle Volume (lts or gallon)" as independent variables. I have chosen to include "Zip Code" as an independent variable in my model. Including the "zip code", did increase the r2 value of the model and hence the model fit.
+
+**The top five county numbers that had the maximum liquor sales are as follows:**
+
+| County Number | Sale (Dollars) | 
+|:-:|---|
+| 77 | 7.747219e+06 | 
+| 57 | 3.139999e+06 |
+| 82.0	| 2.457277e+06 |
+| 52.0 | 2.077858e+06 | 
+| 7.0 | 1.928017e+06 | 
+
+From the data analysis, it appears that county number 77 had the maximum liquor sales in dollars followed by county number 57 and 82.
+
+The top two Store Number in Iowa that had the maximum liquor sales are 2633 and 4829. They located in county "Polk" in county number 77 in the city of Des Moines.
+
+
+**The location of the stores that had the maximum liquor sales can be presented using the following table:**
+
+| Sale (Dollars) | Store Number | City | County | County Number |
+|:-:|---|
+| 1215399.02 | 2633 | DES MOINES | Polk | 77 |
+| 1081941.88 | 4829 | DES MOINES | Polk | 77 |
+| 531684.42	| 2512 | IOWA CITY | Johnson | 52 | 
+| 504057.23 | 3385 | CEDAR RAPIDS | Linn | 57 |
+| 398025.24 | 3420 | WINDSOR HEIGHTS | Polk | 77 |
+  
+In an attempt to figure out the **city that had the maximum liquor sales in the state of Iowa** the following table would be useful:    
+
+| Sale (Dollars) | City | County | County Number |
+|:-:|---|
+| 4380886.26 | DES MOINES | Polk | 77 |
+| 2486949.08 | CEDAR RAPIDS | Linn | 57 |
+| 1697702.84	| DAVENPORT | Scott | 82 | 
+| 1250666.19 | IOWA CITY | Johnson | 52 |
+| 1211603.55 |  WATERLOO | Black Hawk | 7 |
+| 1200607.02 | SIOUX CITY | Woodbury | 97 |  
+
+
+It can be observed that Des Moines and Cedar Rapids are the two cities in Iowa that had the maximum liquor sales and are located in couty number 77 and 57 respectively. Couty number 77 and 57 were infact the top two counties with respect to maximum liquor sales in Iowa. 
+
+The cities i.e. Davenport, Iowa City, Waterloo and Sioux City possess the counties that have recorded top liquor sales in State.
+
+The following table presents a part of the output table in an effot to present the Cities and Counties that had **the maximum liquor volume sold in gallons and the state bottle retail price** for those locations. 
+
+| Volume Sold (Gallons) | County Number | City | County | State Bottle Retail |
+|:-:|---|
+| 132747.24 | 77 | BONDURANT | Polk  | 17.24 |
+| 132747.24 | 77 | WEST DES MOINES | Polk  | 39.36 |
+| 132747.24	| 77 | GRIMES | Polk  | 16.49 | 
+| 132747.24 | 77 | DES MOINES | Polk  | 9.78 |
+| 132747.24 | 77 | DES MOINES | Polk  | 7.92 |
+| 132747.24 | 77 | DES MOINES | Polk  | 24.24 |
+
+It can be observed from the above table that county number 77 had the maximum volume sold and the state bottle retail price has been in between 10 to 17 dollars. The following plot presents the volume sold in county 77 over a period of 1 year.
+
+![Time plot for vol sold for county 77](https://dpalit.github.io/images/project3_timeplot77.png)
+
+A regression model for each county has been done with state bottle retail, volume sold and bottle sold as the independent variable and sale dollars as a dpendent variable. The r2 value for county no 99 was 0.98 and the r2 value for county number 77 was 0.77.
+
+A regression plot with four variables has been presented below. The r2 value for the model was 0.71
+
+![](https://dpalit.github.io/images/project3_regression4.png)
+
+![](https://dpalit.github.io/images/project3_predicted_actual.png)
+ 
+I have used the lasso and ridge regularization; however, the r2 value remained nearly the same. After the cross value optimizationnon the lasso model the r2 value of the model increased to 0.77 and that was the best fit that I obtained for the model.
+
+![](https://dpalit.github.io/images/project3_linear_pred.png)
+
+![](https://dpalit.github.io/images/project3_ridge_pred.png)
 
 
 
