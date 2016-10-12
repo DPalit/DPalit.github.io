@@ -119,7 +119,7 @@ From the bill board data I would presume Breathe and Kryptonite to be the most p
 
 
 
-# Summary of Project 3 (Scenario 2):
+# **Summary of Project 3 (Scenario 2)**
 
 My model analysis is based on the 10% dataset of the Iowa liquor sales. The original data set is very large so I have chosen to work with 10% of the data set. The data had some missing values which the dataframe interpreted as NaN. I preferred to drop the NaN labels for regression analysis. So there is a possibility of some missing information.
 
@@ -191,7 +191,7 @@ The following table presents a part of the output table in an effot to present t
 
 It can be observed from the above table that county number 77 had the maximum volume sold and the state bottle retail price has been in between 10 to 17 dollars. The following plot presents the volume sold in county 77 over a period of 1 year.
 
-![Time plot for vol sold for county 77](https://dpalit.github.io/images/project3_timeplot77.png)
+![Time Plot](https://dpalit.github.io/images/project3_timeplot77.png)
 
 A regression model for each county has been done with state bottle retail, volume sold and bottle sold as the independent variable and sale dollars as a dpendent variable. The r2 value for county no 99 was 0.98 and the r2 value for county number 77 was 0.77.
 
@@ -205,7 +205,7 @@ I have used the lasso and ridge regularization; however, the r2 value remained n
 
 ![](https://dpalit.github.io/images/project3_linear_pred.png)
 
-![](https://dpalit.github.io/images/project3_ridge_pred.png)
+
 
 
 
