@@ -189,9 +189,19 @@ The following table presents a part of the output table in an effot to present t
 | 132747.24 | 77 | DES MOINES | Polk  | 7.92 |
 | 132747.24 | 77 | DES MOINES | Polk  | 24.24 |
 
-It can be observed from the above table that county number 77 had the maximum volume sold and the state bottle retail price has been in between 10 to 17 dollars. The following plot presents the volume sold in county 77 over a period of 1 year.
+![](https://dpalit.github.io/images/project3_timeplot77.png)
 
-![Time Plot](https://dpalit.github.io/images/project3_timeplot77.png)
+The above plot presents the liquor volume sold.
+
+## Yearly sales prediction:
+
+The data for 2015 has been filtered for county number 77. The model has an r2 value of 0.99. The model has a good fit to the data. 
+
+I would suggest opening stores in the county number 77 because it has the recorded highest sales. Yearly predicted sales for a store in county 77 would be 31,003 dollars. The average number of yearly bottle sold for the store would be 2298 and average volume sold would be 2007 liters. The predicted price per bottle would be = 31003/2298 = 13.49
+
+The following plot presents the average sale for county number 77.
+
+![](https://dpalit.github.io/images/project3_timeplotNew.png)
 
 A regression model for each county has been done with state bottle retail, volume sold and bottle sold as the independent variable and sale dollars as a dpendent variable. The r2 value for county no 99 was 0.98 and the r2 value for county number 77 was 0.77.
 
