@@ -117,11 +117,9 @@ From the bill board data I would presume Breathe and Kryptonite to be the most p
 
 
 
-
-
 # **Summary of Project 3 (Scenario 2)**
 
-My model analysis is based on the 10% dataset of the Iowa liquor sales. The original data set is very large so I have chosen to work with 10% of the data set. The data had some missing values which the dataframe interpreted as NaN. I preferred to drop the NaN labels for regression analysis. So there is a possibility of some missing information.
+My model analysis is based on the 10% dataset of the Iowa liquor sales. The original data set is very large so I have chosen to work with 10% of the data set which covers the data from Jan 2015 to March 2016. The data had some missing values which the dataframe interpreted as NaN. I preferred to drop the NaN labels for regression analysis. So there is a possibility of some missing information.
 
 
 The data had 270955 rows and 18 columns. In trying to figure out the columns (variables) that I could use in building the model for the data, it can be observed that:
@@ -132,10 +130,10 @@ The data had 270955 rows and 18 columns. In trying to figure out the columns (va
     - "The State Bottle Retail" * "Bottle Sold" = "Sale (Dollars)" 
     - "Bottle Volume" * "Bottle Sold" = "Volume Sold (liters)" or "Volume Sold (gallons)"
 
-"Item Number" and "Item Description" relate to the same product.
-"Category" and "Category Name" relate to the same item.
+* "Item Number" and "Item Description" relate to the same product.
+* "Category" and "Category Name" relate to the same item.
 
-I have chosed to build the model using quantitative variables. In my model, I have used Sale (Dollars) are the dependent variable and "State Bottle Retail", "Bottle Sold" and  "Bottle Volume (lts or gallon)" as independent variables. I have chosen to include "Zip Code" as an independent variable in my model. Including the "zip code", did increase the r2 value of the model and hence the model fit.
+I have chosen to build the model using quantitative variables. In my model, I have used Sale (Dollars) as the dependent variable and "State Bottle Retail", "Bottle Sold" and  "Bottle Volume (lts or gallon)" as independent variables. I have chosen to include "Zip Code" as an independent variable in my model. Including the "Zip Code", did increase the r2 value of the model and hence has affected the model fit.
 
 **The top five county numbers that had the maximum liquor sales are as follows:**
 
@@ -191,19 +189,11 @@ The following table presents a part of the output table in an effot to present t
 
 ![](https://dpalit.github.io/images/project3_timeplot77.png)
 
-The above plot presents the liquor volume sold.
+The above plot presents the liquor sale for the state of Iowa.
 
-## Yearly sales prediction:
+## Regression Analysis
 
-The data for 2015 has been filtered for county number 77. The model has an r2 value of 0.99. The model has a good fit to the data. 
-
-I would suggest opening stores in the county number 77 because it has the recorded highest sales. Yearly predicted sales for a store in county 77 would be 31,003 dollars. The average number of yearly bottle sold for the store would be 2298 and average volume sold would be 2007 liters. The predicted price per bottle would be = 31003/2298 = 13.49
-
-The following plot presents the average sale for county number 77.
-
-![](https://dpalit.github.io/images/project3_timeplotNew.png)
-
-A regression model for each county has been done with state bottle retail, volume sold and bottle sold as the independent variable and sale dollars as a dpendent variable. The r2 value for county no 99 was 0.98 and the r2 value for county number 77 was 0.77.
+A regression model for each county has been done with state bottle retail, volume sold and bottle sold as the independent variable and sale dollars as a dependent variable. The r2 value for county no 99 was 0.98 and the r2 value for county number 77 was 0.77.
 
 A regression plot with four variables has been presented below. The r2 value for the model was 0.71
 
@@ -213,7 +203,24 @@ A regression plot with four variables has been presented below. The r2 value for
  
 I have used the lasso and ridge regularization; however, the r2 value remained nearly the same. After the cross value optimizationnon the lasso model the r2 value of the model increased to 0.77 and that was the best fit that I obtained for the model.
 
-![](https://dpalit.github.io/images/project3_linear_pred.png)
+## Yearly sales prediction:
+
+Based on the regression analysis and after analysis of the tables I would suggest opening stores in County Number 77.
+County Number 77 had the maximum recorded liquor sales. In order to create a model for county number 77, I have chosen "Bottles Sold" and "Volume Sold (liters)" as my independent variables and "Sale (Dollars)" as my dependent variable.
+
+The data for 2015 has been filtered for county number 77. The model has an r2 value of 0.99 which shows that the model has a good fit to the data.
+
+I have taken the mean values of the independent variables for each store in an attempt to predict the yealy sales for each store in the county.
+
+If we open a store in county number 77, I could predict that the yearly liquor sale for the store would be around 31,003 dollars. The average number of yearly bottles sold for the store could be predicted as  2298. The average volume of liquor sold for the new store has been predicted as 2007 liters. I could predict a price per bottle at the store as = 31003/2298 = 13.49 dollars based on the predictions of my model.
+
+![](https://dpalit.github.io/images/project3_timeplotNew.png)
+
+The above plot shows the yearly sale in couty number 77. My model predicts a yearly sale of around $31003 for each store which appears to be possible by observing the plot.
+
+From all the above analysis, I would highly recommend opening stores in 77 number county in the state of Iowa.
+
+
 
 
 
