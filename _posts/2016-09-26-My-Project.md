@@ -222,6 +222,58 @@ From all the above analysis, I would highly recommend opening stores in 77 numbe
 
 
 
+# Summary of Project 4: Salary Prediction for Data Professionals
+
+In this project we are trying to gauge the industry factors that influence the pay scale of professionals in the field of Data Science. This information is considered to be a valuable information for hiring firms. 
+
+We used webscrapping methods to collect the salary information from the web, converted the data into csv and have imported the data using pandas into a dataframe.
+
+The independent variables for the model are 'location' and 'job title'. The dependent variable for the model is 'pay' or 'salary of the individual'. Hence, according to the model, pay of an individual is influenced by the job title they hold and the location of their work. 
+
+We have four work place locations: Boston, DC, New York, and San Francisco. We had a number of job titles in our original data which we have grouped into two buckets: Data Analyst and Data Scientist.
+
+
+Classification model has been applied to the data by creating binary variables. Analysis has been performed by  Logistic regression using Statsmodel as well as scikit learn.
+
+We have about 1110 rows of data for analysis. The following is the histogram of the pay(meanPay is the name of the column in the dataset) which presents the pay distribution.
+
+![](https://dpalit.github.io/images/project4_histogram1.png)
+
+
+The pay that is less than $20,000 has been considered as an outlier and has been removed from the dataset. The following histogram presents the pay distribution without the outliers.
+
+![](https://dpalit.github.io/images/project4_histogram2.png)
+
+The average pay has been calculate as $85,152.
+The median pay has been calculated as $76,000.
+Their is a standard deviation of 30048.
+
+For binary classification, the cut of has been taken as 80,000. Pay less than 80K has been classified as low (denoted 0) and a pay above 80K has been classified as high (denoted 1).
+
+The mean of the data is 44% i.e. 44% of the positions have  a pay above 80K.
+
+In scikit learn, a model score of 81% has been obtained. 
+
+The co-efficients of the model are:
+
+| 0 | 1 | 
+|:-:|---|
+| Boston | -0.128888914152 |
+| DC | -0.195295043737 | 
+| New York	| -0.105317349757 | 
+| San Francisco | 0.81047244054 |
+| Data Analyst | -1.65889801317 |
+| Data Scientist | 2.03986914606 | 
+ 
+ 
+# Prediction: 
+
+We tried to predict the salary of a Data Scientist in New York using the model.
+
+The model predicted that the probability of finding a position as a Data Scientist in New York is 91%.
+
+
+ 
 
 
 
