@@ -258,19 +258,17 @@ The co-efficients of the model are:
 
 | 0 | 1 | 
 |:-:|---|
-| Boston | -0.128888914152 |
-| DC | -0.195295043737 | 
-| New York	| -0.105317349757 | 
-| San Francisco | 0.81047244054 |
-| Data Analyst | -1.65889801317 |
-| Data Scientist | 2.03986914606 | 
+| DC | -0.052655 | 
+| New York	| 0.05977 | 
+| San Francisco | 0.95155 |
+| Data Analyst | -3.5277 |
  
  
 # Prediction: 
 
-We tried to predict the salary of a Data Scientist in New York using the model.
+We tried to predict the salary of a Data Analyst in New York using the model.
 
-The model predicted that the probability of finding a position as a Data Scientist in New York is 91%.
+The model predicted that the probability of finding a position as a Data Analyst in New York with a pay (high) i.e. over 80K is 20%.
 
 
  
