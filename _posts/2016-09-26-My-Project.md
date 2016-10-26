@@ -273,7 +273,7 @@ The model predicted that the probability of finding a position as a Data Analyst
 
  
 
-# Summary of Project 4: Analysis of the Titanic Diaster
+# Summary of Project 5: Analysis of the Titanic Diaster
 
 Goal of the project: In this project we use the titanic passenger data (name, age, gender, social-ecominic status i.e. the PClass they were travelling in the ship) to predict who will survive the disaster and who will not survive the disaster. 
     
