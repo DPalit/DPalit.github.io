@@ -1,6 +1,6 @@
 
 
-# ** Project 1: Summary of the SAT Scores in the United States**
+# Project 1: Summary of the SAT Scores in the United States
 
 The data presents the mean Math and Verbal scores in 51 different states in the United States. United Sates has 50 states but DC has been included as a state in the data and that changes the number of states as 51. The last column with the state abbreviation  “ALL” is not a state ; hence has not been included in numerical analysis.
 
@@ -26,7 +26,7 @@ The scatter plot shows that the maximum math and verbal scores are at lower rate
 
 
 
-# ** Project 2: Bill Board Data Analysis **
+# Project 2: Bill Board Data Analysis 
 
 
 
@@ -117,7 +117,7 @@ From the bill board data I would presume Breathe and Kryptonite to be the most p
 
 
 
-# **Summary of Project 3 (Scenario 2)**
+# Summary of Project 3 (Scenario 2)
 
 My model analysis is based on the 10% dataset of the Iowa liquor sales. The original data set is very large so I have chosen to work with 10% of the data set which covers the data from Jan 2015 to March 2016. The data had some missing values which the dataframe interpreted as NaN. I preferred to drop the NaN labels for regression analysis. So there is a possibility of some missing information.
 
@@ -273,7 +273,46 @@ The model predicted that the probability of finding a position as a Data Analyst
 
  
 
+# Summary of Project 4: Analysis of the Titanic Diaster
 
+Goal of the project: In this project we use the titanic passenger data (name, age, gender, social-ecominic status i.e. the PClass they were travelling in the ship) to predict who will survive the disaster and who will not survive the disaster. 
+    
+In the data, 'SibSp' represents Siblings and Spouse;
+             'Parch' represents Parents and Childern;
+              'PClass' represents the Passenger Class;
+                'Survived' has binay value: 1 (survived) or 0 (not survived/ died);
+                'Sex' has 1 (female) or 0 (male).
+                
+A logistic regression has been attempted to fit model to where 'Survival' is the dependent variable and 'Pclass',    'NewAge', 'Gender', 'Parch'and 'SibSp' are the dependent variables. It can be observed that when the value of the      Kneighbor = 7, the accuracy of the model is maximum at 0.75
+    
+![](https://dpalit.github.io/images/project5_KNN.png)
+    
+A logistic regression with scikit learn has been performed and the score of the model was 80%. 
+    
+From the co-efficients of the model, it appears that female passengers (co-efficient = 1.75) had the maximum chances of survival followed by passengers travelling in the first class (co-efficient = 1.48). 
+People travelling in  the 3rd class and male passengers had lower chance of survival.
+So, a female travelling in the first class had the most chances of survival.
+    
+Following is the confusion matrix that was generated from the regression:
+
+
+|  | predicted_survived | predicted_not_survived |
+|:-:|---|
+| survived  | 71 | 29 |
+| not_survived | 22 | 146
+ 
+
+From the above confusion matrix, we can see that the type II error is 29 and the type I error is 22. The type II  error means that a person who has infact survived, has been predicted not to have survived. So, the search is not on for that person.
+    
+Our goal is to reduce the type II error. The standard classification threshold for the above regression model was      0.5. By lowering the threshold to 0.06 the type II error was reduced to 1.  
+    
+Following is the ROC curve which is a plot between correct vs incorrect i.e. true positive rate vs false positive rate.
+     
+![](https://dpalit.github.io/images/project5_ROC.png)
+    
+Lasso and Ridge regularization were performed on the model followed by gridsearch. The best parameters for   gridsearch were C = 0.275 at penalty = 12.
+     
+Based on the model we have tried to predict the chances of survival of a male of age 26yrs with a family size of 2 and travelling on a second class ticket. The model has predicted that the chances of survival of the passenger as 21%.
 
 
 
