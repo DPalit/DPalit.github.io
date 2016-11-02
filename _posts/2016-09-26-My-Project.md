@@ -316,6 +316,54 @@ Based on the model we have tried to predict the chances of survival of a male of
 
 
 
+# Summary of the Project 6: IMDB Movies Analysis
+
+I have tried to gather the data using IMDBpy and have also taken help from a kaggle competition post.
+
+In the IMDB movies data set there are a number of variables. I have filtered the data for English language and country as United States. In the new filtered dataset, the 'imdb-score' is the dependent variables and the independent variables are:  
+
+budget i.e. the budget of the movie  
+
+movie_facebook_likes i.e. facebook likes for the movie  
+
+actor_2_facebook_likes i.e. facebook likes for the second actor  
+
+actor_1_facebook_likes i.e. facebook likes for the first actor  
+
+num_user_for_reviews i.e number of users for review  
+
+num_voted_users i.e number of voted users  
+
+gross i.e. the gross capital that the movies collected  
+
+director_facebook_likes i.e facebook likes for the director  
+
+duration i.e. duration of the movie  
+
+## Parametric Model Analysis:
+
+An attempt to figure out the linear co-relationship of the independent variables with the dependent variable has been done by doing scatter plots. It appears that "number of users for review", "number of voted users", "facebook likes for the movie" and "the gross capital" that the movies collected have no significant to very little linear relationship. The other variables donot exhibit any linear relationship.
+
+The following plot shows a scatter plot between number of voted users and imdb_score.  
+
+![](https://dpalit.github.io/images/project6_linear_plot.png)
+
+
+## Non-Parametric Model Analysis
+
+Hence, to figure out the features that are most important for the model, a non-parametric model has been built. A decision tree model has been made and using feature selection we determine the features that are more valuable to the model.
+
+The score of the decision tree model is not very high and the variance is high. In an attempt to make a model with better score and low variance, we have done sample bagging and have used random forest regressor. Adaboost and gradient boost has also been performed. However, the model fit has improved only slightly.
+
+The following plot describes the feature selection in random forest.  
+
+
+![](https://dpalit.github.io/images/project6_feat_sel.png)
+
+ 
+From feature selection, it can be observed that for the'imbd_score' the most influential features are the "number of voted users" followed by the "budget of the movie" and "duration of the movie". 
+
+The suggestion to Netflix would be to collect the movies from the IMDB that have high "number of voted users", high "movie budget" and "duration" of the movie is also a factor to look into.
 
 
 
