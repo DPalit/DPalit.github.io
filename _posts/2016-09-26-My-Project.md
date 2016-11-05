@@ -139,7 +139,7 @@ The co-efficients of the model are:
 | Data Analyst | -3.5277 |
  
  
-# Prediction: 
+## Prediction: 
 
 We tried to predict the salary of a Data Analyst in New York using the model.
 
