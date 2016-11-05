@@ -296,8 +296,8 @@ So, a female travelling in the first class had the most chances of survival.
 Following is the confusion matrix that was generated from the regression:
 
 
-|  | predicted_survived | predicted_not_survived |
-|:-:|---|
+| | predicted_survived | predicted_not_survived |
+  |--------------------|------------------------|		
 | survived  | 71 | 29 |
 | not_survived | 22 | 146
  
