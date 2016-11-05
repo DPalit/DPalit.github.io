@@ -1,119 +1,149 @@
 
 
-# Project 1: Summary of the SAT Scores in the United States
+# Summary of the Project 6: IMDB Movies Analysis
 
-The data presents the mean Math and Verbal scores in 51 different states in the United States. United Sates has 50 states but DC has been included as a state in the data and that changes the number of states as 51. The last column with the state abbreviation  “ALL” is not a state ; hence has not been included in numerical analysis.
+I have tried to gather the data using IMDBpy and have also taken help from a kaggle competition post.
 
-The data has four columns. The three columns with numeric values are “Verbal”, “Math” and “Rate”. The “State” column contains non-numeric value i.e. string type. 
+In the IMDB movies data set there are a number of variables. I have filtered the data for English language and country as United States. In the new filtered dataset, the 'imdb-score' is the dependent variables and the independent variables are:  
 
-In CSV, all data is in type string; however, if the dataset in loaded using pandas, the data type for the “State” column is object and the data type of the numeric columns is integer. The type of the data frame is object.
+budget i.e. the budget of the movie  
 
-The minimum verbal score is 482 in DC and the maximum verbal score is 593 in IA. The minimum math score is 439 in OH and the maximum math score is 603 in IA.
-The rate has a minimum value of 4 in three states SD, ND and MS. The rate has a maximum value of 82 in CT.
+movie_facebook_likes i.e. facebook likes for the movie  
 
-* The mean for math, rate and verbal is 531.84, 37 and 532.52 respectively.
-* The median for math, rate and verbal 525, 33 and 527 respectively.
-* The mode for math, rate and verbal is 499, 4 and 562 respectively.
-* The standard deviation for math, rate and verbal is 35.92, 27.27 and 33.03 respectively.
+actor_2_facebook_likes i.e. facebook likes for the second actor  
 
-The histograms for math, verbal and rate reveal that we have a non-normal distribution. In a normal distribution, the mean, median and mode values are the same. 
-The scatter plot shows that the maximum math and verbal scores are at lower rates and as the rate increases, the math and verbal scores tend to drop. Hence the scores are inversely related to the rate.
+actor_1_facebook_likes i.e. facebook likes for the first actor  
+
+num_user_for_reviews i.e number of users for review  
+
+num_voted_users i.e number of voted users  
+
+gross i.e. the gross capital that the movies collected  
+
+director_facebook_likes i.e facebook likes for the director  
+
+duration i.e. duration of the movie  
+
+## Parametric Model Analysis:
+
+An attempt to figure out the linear co-relationship of the independent variables with the dependent variable has been done by doing scatter plots. It appears that "number of users for review", "number of voted users", "facebook likes for the movie" and "the gross capital" that the movies collected have no significant to very little linear relationship. The other variables donot exhibit any linear relationship.
+
+The following plot shows a scatter plot between number of voted users and imdb_score.  
+
+![](https://dpalit.github.io/images/project6_linear_plot.png)
+
+
+## Non-Parametric Model Analysis
+
+Hence, to figure out the features that are most important for the model, a non-parametric model has been built. A decision tree model has been made and using feature selection we determine the features that are more valuable to the model.
+
+The score of the decision tree model is not very high and the variance is high. In an attempt to make a model with better score and low variance, we have done sample bagging and have used random forest regressor. Adaboost and gradient boost has also been performed. However, the model fit has improved only slightly.
+
+The following plot describes the feature selection in random forest.  
+
+
+![](https://dpalit.github.io/images/project6_feat_sel.png)
+
+ 
+From feature selection, it can be observed that for the'imbd_score' the most influential features are the "number of voted users" followed by the "budget of the movie" and "duration of the movie". 
+
+The suggestion to Netflix would be to collect the movies from the IMDB that have high "number of voted users", high "movie budget" and "duration" of the movie is also a factor to look into.  
+  
 
 
 
+# Summary of Project 5: Analysis of the Titanic Diaster
+
+Goal of the project: In this project we use the titanic passenger data (name, age, gender, social-ecominic status i.e. the PClass they were travelling in the ship) to predict who will survive the disaster and who will not survive the disaster. 
+    
+In the data, 'SibSp' represents Siblings and Spouse;
+             'Parch' represents Parents and Childern;
+              'PClass' represents the Passenger Class;
+                'Survived' has binay value: 1 (survived) or 0 (not survived/ died);
+                'Sex' has 1 (female) or 0 (male).
+                
+A logistic regression has been attempted to fit model to where 'Survival' is the dependent variable and 'Pclass',    'NewAge', 'Gender', 'Parch'and 'SibSp' are the dependent variables. It can be observed that when the value of the      Kneighbor = 7, the accuracy of the model is maximum at 0.75
+    
+![](https://dpalit.github.io/images/project5_KNN.png)
+    
+A logistic regression with scikit learn has been performed and the score of the model was 80%. 
+    
+From the co-efficients of the model, it appears that female passengers (co-efficient = 1.75) had the maximum chances of survival followed by passengers travelling in the first class (co-efficient = 1.48). 
+People travelling in  the 3rd class and male passengers had lower chance of survival.
+So, a female travelling in the first class had the most chances of survival.
+    
+Following is the confusion matrix that was generated from the regression:
+
+
+| | predicted_survived | predicted_not_survived |
+  |--------------------|------------------------|		
+| survived  | 71 | 29 |
+| not_survived | 22 | 146
+ 
+
+From the above confusion matrix, we can see that the type II error is 29 and the type I error is 22. The type II  error means that a person who has infact survived, has been predicted not to have survived. So, the search is not on for that person.
+    
+Our goal is to reduce the type II error. The standard classification threshold for the above regression model was      0.5. By lowering the threshold to 0.06 the type II error was reduced to 1.  
+    
+Following is the ROC curve which is a plot between correct vs incorrect i.e. true positive rate vs false positive rate.
+     
+![](https://dpalit.github.io/images/project5_ROC.png)
+    
+Lasso and Ridge regularization were performed on the model followed by gridsearch. The best parameters for   gridsearch were C = 0.275 at penalty = 12.
+     
+Based on the model we have tried to predict the chances of survival of a male of age 26yrs with a family size of 2 and travelling on a second class ticket. The model has predicted that the chances of survival of the passenger as 21%.  
+  
 
 
 
+# Summary of Project 4: Salary Prediction for Data Professionals
+
+In this project we are trying to gauge the industry factors that influence the pay scale of professionals in the field of Data Science. This information is considered to be a valuable information for hiring firms. 
+
+We used webscrapping methods to collect the salary information from the web, converted the data into csv and have imported the data using pandas into a dataframe.
+
+The independent variables for the model are 'location' and 'job title'. The dependent variable for the model is 'pay' or 'salary of the individual'. Hence, according to the model, pay of an individual is influenced by the job title they hold and the location of their work. 
+
+We have four work place locations: Boston, DC, New York, and San Francisco. We had a number of job titles in our original data which we have grouped into two buckets: Data Analyst and Data Scientist.
 
 
-# Project 2: Bill Board Data Analysis 
+Classification model has been applied to the data by creating binary variables. Analysis has been performed by  Logistic regression using Statsmodel as well as scikit learn.
+
+We have about 1110 rows of data for analysis. The following is the histogram of the pay(meanPay is the name of the column in the dataset) which presents the pay distribution.
+
+![](https://dpalit.github.io/images/project4_histogram1.png)
 
 
+The pay that is less than $20,000 has been considered as an outlier and has been removed from the dataset. The following histogram presents the pay distribution without the outliers.
 
-Bill Board is a music industry record chart for ranking the 100 most popular songs.
+![](https://dpalit.github.io/images/project4_histogram2.png)
 
-Assumptions: 
+The average pay has been calculate as $85,152.
+The median pay has been calculated as $76,000.
+Their is a standard deviation of 30048.
 
-The data contains a number of empty spaces and stars (\*). I have replaced the empty spaces and the stars (\*) with 0.
+For binary classification, the cut of has been taken as 80,000. Pay less than 80K has been classified as low (denoted 0) and a pay above 80K has been classified as high (denoted 1).
 
-The data presents twelve genres of music and 317 songs. If I assume that ‘R & B’ and ‘R&B’ as the same genre; there are 11 different genres of music in the data. 
+The mean of the data is 44% i.e. 44% of the positions have  a pay above 80K.
 
-Following are the different genres of music in the data:
+In scikit learn, a model score of 81% has been obtained. 
 
-| Genres | Number of songs in the genre |
+The co-efficients of the model are:
+
+| 0 | 1 | 
 |:-:|---|
-|Rock	| 103 |
-|Country	| 74 |
-|Rap	| 58 |
-|Rock ’n’ Roll	| 34 |
-|R&B	| 13 |
-|R & B	| 10 |
-|Pop 	| 9 |
-|Latin	| 9 |
-|Electronica	| 4 |
-|Gospel	| 1 |
-|Jazz	| 1 |
-|Reggae	| 1 |
+| DC | -0.052655 | 
+| New York	| 0.05977 | 
+| San Francisco | 0.95155 |
+| Data Analyst | -3.5277 |
+ 
+ 
+# Prediction: 
 
+We tried to predict the salary of a Data Analyst in New York using the model.
 
-![](https://dpalit.github.io/images/project2_barplot.png)
-
-The genre ‘Rock’ is the most popular genre with 103 songs followed by ‘Country’ and ‘Rap’.
-
-I have assumed that the column ‘time’ is the track time. The ‘time’ column in the data frame is of type string and I have extracted the integer values from the column for track time calculations. The histogram of track time shows that the maximum frequency distribution is at 4 i.e. maximum number of songs have a track length of around 4 minutes.
-
-
-![](https://dpalit.github.io/images/project2_histogram.png)
-
-
-| Statistical calculations | Values |
-|:-:|---|
-|Maximum Track Time	| 7.8 |
-|Minimum Track Time	| 2.6 |
-|Mean Track Time 	| 4.2 |
-|Standard Deviation of Track Time	| 0.9 |
-
-
-Among ‘Rock’ songs, “Where I Wanna Be” sung by “Jones, Donell” has the maximum track length of 6.22 minutes.
-
-If we perform an analysis of the data we see that “Independent Women Part 1” achieved the no. 1 position in the bill board for 11 weeks. followed by Maria, Maria which was in the bill board for 10 weeks. Top two observations from the output has been given in the table below: 
-
-
-| Songs in the no. 1 position | Number of weeks in No. 1 position |
-|:-:|---|
-|Independent Women Part 1 | 11 |
-|Maria, Maria	| 10 |
-
-
-I have tried to analyze for how many weeks a song has been in the top ten position in the bill board.
-“Breadth” with a song index of 17 in the data frame sung by “Hill, Faith” belonging to the genre “Rap” has been in the top ten position for 19 weeks.
-Top four observations from the output has been presented in the table below:
-
-
-| Song in the top 10 position | Number of Weeks in top 10 position |
-|:-:|---|
-| Breathe | 19 |
-|Maria, Maria	| 18 |
-| Kryptonite	| 18 |
-|Everything You Want | 18 |
-
-
-So, we can observe that though “Independent Women Part 1” has been in the number 1 position for the most number of weeks (11 weeks) has actually been in the top ten position in the bill board for 16 weeks.
-
-I have tried to analyze for how many weeks a song has actually been in the bill board. Top four observations from the output has been presented below:
-
-
-| Song in the bill board | Genre | Number of Weeks |
-|:-:|---|
-|Higher	| Rock ’n’ Roll | 57 |
-|Amazed	| Country | 55 |
-|Kryptonite	| Rock | 53 |
-|Breathe	| Rap | 53 |
-
-So, we can observe that  even though ‘Higher’  was never in the number 1 position in bill board it has still been in the bill board for the longest period of time i.e. 57 weeks. ‘Kryptonite’ and ‘Breadth’ are among the songs to achieve the longest run as top ten and have also been in the bill board for relatively longer.
-
-From the bill board data I would presume Breathe and Kryptonite to be the most popular songs because they have secured a position among the top ten for the most number of weeks along with being one of the longest runnings in the bill board.
-
+The model predicted that the probability of finding a position as a Data Analyst in New York with a pay (high) i.e. over 80K is 20%.  
+  
 
 
 
@@ -218,152 +248,125 @@ If we open a store in county number 77, I could predict that the yearly liquor s
 
 The above plot shows the yearly sale in couty number 77. My model predicts a yearly sale of around $31003 for each store which appears to be possible by observing the plot.
 
-From all the above analysis, I would highly recommend opening stores in 77 number county in the state of Iowa.
+From all the above analysis, I would highly recommend opening stores in 77 number county in the state of Iowa.  
+  
 
 
 
-# Summary of Project 4: Salary Prediction for Data Professionals
-
-In this project we are trying to gauge the industry factors that influence the pay scale of professionals in the field of Data Science. This information is considered to be a valuable information for hiring firms. 
-
-We used webscrapping methods to collect the salary information from the web, converted the data into csv and have imported the data using pandas into a dataframe.
-
-The independent variables for the model are 'location' and 'job title'. The dependent variable for the model is 'pay' or 'salary of the individual'. Hence, according to the model, pay of an individual is influenced by the job title they hold and the location of their work. 
-
-We have four work place locations: Boston, DC, New York, and San Francisco. We had a number of job titles in our original data which we have grouped into two buckets: Data Analyst and Data Scientist.
+# Project 2: Bill Board Data Analysis 
 
 
-Classification model has been applied to the data by creating binary variables. Analysis has been performed by  Logistic regression using Statsmodel as well as scikit learn.
 
-We have about 1110 rows of data for analysis. The following is the histogram of the pay(meanPay is the name of the column in the dataset) which presents the pay distribution.
+Bill Board is a music industry record chart for ranking the 100 most popular songs.
 
-![](https://dpalit.github.io/images/project4_histogram1.png)
+Assumptions: 
 
+The data contains a number of empty spaces and stars (\*). I have replaced the empty spaces and the stars (\*) with 0.
 
-The pay that is less than $20,000 has been considered as an outlier and has been removed from the dataset. The following histogram presents the pay distribution without the outliers.
+The data presents twelve genres of music and 317 songs. If I assume that ‘R & B’ and ‘R&B’ as the same genre; there are 11 different genres of music in the data. 
 
-![](https://dpalit.github.io/images/project4_histogram2.png)
+Following are the different genres of music in the data:
 
-The average pay has been calculate as $85,152.
-The median pay has been calculated as $76,000.
-Their is a standard deviation of 30048.
-
-For binary classification, the cut of has been taken as 80,000. Pay less than 80K has been classified as low (denoted 0) and a pay above 80K has been classified as high (denoted 1).
-
-The mean of the data is 44% i.e. 44% of the positions have  a pay above 80K.
-
-In scikit learn, a model score of 81% has been obtained. 
-
-The co-efficients of the model are:
-
-| 0 | 1 | 
+| Genres | Number of songs in the genre |
 |:-:|---|
-| DC | -0.052655 | 
-| New York	| 0.05977 | 
-| San Francisco | 0.95155 |
-| Data Analyst | -3.5277 |
- 
- 
-# Prediction: 
+|Rock	| 103 |
+|Country	| 74 |
+|Rap	| 58 |
+|Rock ’n’ Roll	| 34 |
+|R&B	| 13 |
+|R & B	| 10 |
+|Pop 	| 9 |
+|Latin	| 9 |
+|Electronica	| 4 |
+|Gospel	| 1 |
+|Jazz	| 1 |
+|Reggae	| 1 |
 
-We tried to predict the salary of a Data Analyst in New York using the model.
 
-The model predicted that the probability of finding a position as a Data Analyst in New York with a pay (high) i.e. over 80K is 20%.
+![](https://dpalit.github.io/images/project2_barplot.png)
+
+The genre ‘Rock’ is the most popular genre with 103 songs followed by ‘Country’ and ‘Rap’.
+
+I have assumed that the column ‘time’ is the track time. The ‘time’ column in the data frame is of type string and I have extracted the integer values from the column for track time calculations. The histogram of track time shows that the maximum frequency distribution is at 4 i.e. maximum number of songs have a track length of around 4 minutes.
 
 
- 
+![](https://dpalit.github.io/images/project2_histogram.png)
 
-# Summary of Project 5: Analysis of the Titanic Diaster
 
-Goal of the project: In this project we use the titanic passenger data (name, age, gender, social-ecominic status i.e. the PClass they were travelling in the ship) to predict who will survive the disaster and who will not survive the disaster. 
+| Statistical calculations | Values |
+|:-:|---|
+|Maximum Track Time	| 7.8 |
+|Minimum Track Time	| 2.6 |
+|Mean Track Time 	| 4.2 |
+|Standard Deviation of Track Time	| 0.9 |
+
+
+Among ‘Rock’ songs, “Where I Wanna Be” sung by “Jones, Donell” has the maximum track length of 6.22 minutes.
+
+If we perform an analysis of the data we see that “Independent Women Part 1” achieved the no. 1 position in the bill board for 11 weeks. followed by Maria, Maria which was in the bill board for 10 weeks. Top two observations from the output has been given in the table below: 
+
+
+| Songs in the no. 1 position | Number of weeks in No. 1 position |
+|:-:|---|
+|Independent Women Part 1 | 11 |
+|Maria, Maria	| 10 |
+
+
+I have tried to analyze for how many weeks a song has been in the top ten position in the bill board.
+“Breadth” with a song index of 17 in the data frame sung by “Hill, Faith” belonging to the genre “Rap” has been in the top ten position for 19 weeks.
+Top four observations from the output has been presented in the table below:
+
+
+| Song in the top 10 position | Number of Weeks in top 10 position |
+|:-:|---|
+| Breathe | 19 |
+|Maria, Maria	| 18 |
+| Kryptonite	| 18 |
+|Everything You Want | 18 |
+
+
+So, we can observe that though “Independent Women Part 1” has been in the number 1 position for the most number of weeks (11 weeks) has actually been in the top ten position in the bill board for 16 weeks.
+
+I have tried to analyze for how many weeks a song has actually been in the bill board. Top four observations from the output has been presented below:
+
+
+| Song in the bill board | Genre | Number of Weeks |
+|:-:|---|
+|Higher	| Rock ’n’ Roll | 57 |
+|Amazed	| Country | 55 |
+|Kryptonite	| Rock | 53 |
+|Breathe	| Rap | 53 |
+
+So, we can observe that  even though ‘Higher’  was never in the number 1 position in bill board it has still been in the bill board for the longest period of time i.e. 57 weeks. ‘Kryptonite’ and ‘Breadth’ are among the songs to achieve the longest run as top ten and have also been in the bill board for relatively longer.
+
+From the bill board data I would presume Breathe and Kryptonite to be the most popular songs because they have secured a position among the top ten for the most number of weeks along with being one of the longest runnings in the bill board.  
+  
+
+
+
+
+# Project 1: Summary of the SAT Scores in the United States
+
+The data presents the mean Math and Verbal scores in 51 different states in the United States. United Sates has 50 states but DC has been included as a state in the data and that changes the number of states as 51. The last column with the state abbreviation  “ALL” is not a state ; hence has not been included in numerical analysis.
+
+The data has four columns. The three columns with numeric values are “Verbal”, “Math” and “Rate”. The “State” column contains non-numeric value i.e. string type. 
+
+In CSV, all data is in type string; however, if the dataset in loaded using pandas, the data type for the “State” column is object and the data type of the numeric columns is integer. The type of the data frame is object.
+
+The minimum verbal score is 482 in DC and the maximum verbal score is 593 in IA. The minimum math score is 439 in OH and the maximum math score is 603 in IA.
+The rate has a minimum value of 4 in three states SD, ND and MS. The rate has a maximum value of 82 in CT.
+
+* The mean for math, rate and verbal is 531.84, 37 and 532.52 respectively.
+* The median for math, rate and verbal 525, 33 and 527 respectively.
+* The mode for math, rate and verbal is 499, 4 and 562 respectively.
+* The standard deviation for math, rate and verbal is 35.92, 27.27 and 33.03 respectively.
+
+The histograms for math, verbal and rate reveal that we have a non-normal distribution. In a normal distribution, the mean, median and mode values are the same. 
+The scatter plot shows that the maximum math and verbal scores are at lower rates and as the rate increases, the math and verbal scores tend to drop. Hence the scores are inversely related to the rate.  
+  
+
     
-In the data, 'SibSp' represents Siblings and Spouse;
-             'Parch' represents Parents and Childern;
-              'PClass' represents the Passenger Class;
-                'Survived' has binay value: 1 (survived) or 0 (not survived/ died);
-                'Sex' has 1 (female) or 0 (male).
-                
-A logistic regression has been attempted to fit model to where 'Survival' is the dependent variable and 'Pclass',    'NewAge', 'Gender', 'Parch'and 'SibSp' are the dependent variables. It can be observed that when the value of the      Kneighbor = 7, the accuracy of the model is maximum at 0.75
-    
-![](https://dpalit.github.io/images/project5_KNN.png)
-    
-A logistic regression with scikit learn has been performed and the score of the model was 80%. 
-    
-From the co-efficients of the model, it appears that female passengers (co-efficient = 1.75) had the maximum chances of survival followed by passengers travelling in the first class (co-efficient = 1.48). 
-People travelling in  the 3rd class and male passengers had lower chance of survival.
-So, a female travelling in the first class had the most chances of survival.
-    
-Following is the confusion matrix that was generated from the regression:
 
-
-| | predicted_survived | predicted_not_survived |
-  |--------------------|------------------------|		
-| survived  | 71 | 29 |
-| not_survived | 22 | 146
- 
-
-From the above confusion matrix, we can see that the type II error is 29 and the type I error is 22. The type II  error means that a person who has infact survived, has been predicted not to have survived. So, the search is not on for that person.
-    
-Our goal is to reduce the type II error. The standard classification threshold for the above regression model was      0.5. By lowering the threshold to 0.06 the type II error was reduced to 1.  
-    
-Following is the ROC curve which is a plot between correct vs incorrect i.e. true positive rate vs false positive rate.
-     
-![](https://dpalit.github.io/images/project5_ROC.png)
-    
-Lasso and Ridge regularization were performed on the model followed by gridsearch. The best parameters for   gridsearch were C = 0.275 at penalty = 12.
-     
-Based on the model we have tried to predict the chances of survival of a male of age 26yrs with a family size of 2 and travelling on a second class ticket. The model has predicted that the chances of survival of the passenger as 21%.
-
-
-
-# Summary of the Project 6: IMDB Movies Analysis
-
-I have tried to gather the data using IMDBpy and have also taken help from a kaggle competition post.
-
-In the IMDB movies data set there are a number of variables. I have filtered the data for English language and country as United States. In the new filtered dataset, the 'imdb-score' is the dependent variables and the independent variables are:  
-
-budget i.e. the budget of the movie  
-
-movie_facebook_likes i.e. facebook likes for the movie  
-
-actor_2_facebook_likes i.e. facebook likes for the second actor  
-
-actor_1_facebook_likes i.e. facebook likes for the first actor  
-
-num_user_for_reviews i.e number of users for review  
-
-num_voted_users i.e number of voted users  
-
-gross i.e. the gross capital that the movies collected  
-
-director_facebook_likes i.e facebook likes for the director  
-
-duration i.e. duration of the movie  
-
-## Parametric Model Analysis:
-
-An attempt to figure out the linear co-relationship of the independent variables with the dependent variable has been done by doing scatter plots. It appears that "number of users for review", "number of voted users", "facebook likes for the movie" and "the gross capital" that the movies collected have no significant to very little linear relationship. The other variables donot exhibit any linear relationship.
-
-The following plot shows a scatter plot between number of voted users and imdb_score.  
-
-![](https://dpalit.github.io/images/project6_linear_plot.png)
-
-
-## Non-Parametric Model Analysis
-
-Hence, to figure out the features that are most important for the model, a non-parametric model has been built. A decision tree model has been made and using feature selection we determine the features that are more valuable to the model.
-
-The score of the decision tree model is not very high and the variance is high. In an attempt to make a model with better score and low variance, we have done sample bagging and have used random forest regressor. Adaboost and gradient boost has also been performed. However, the model fit has improved only slightly.
-
-The following plot describes the feature selection in random forest.  
-
-
-![](https://dpalit.github.io/images/project6_feat_sel.png)
-
- 
-From feature selection, it can be observed that for the'imbd_score' the most influential features are the "number of voted users" followed by the "budget of the movie" and "duration of the movie". 
-
-The suggestion to Netflix would be to collect the movies from the IMDB that have high "number of voted users", high "movie budget" and "duration" of the movie is also a factor to look into.
 
 
 
