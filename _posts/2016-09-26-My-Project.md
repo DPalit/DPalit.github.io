@@ -1,6 +1,7 @@
 
 
-# Summary of the Project 6: IMDB Movies Analysis
+# Project 6: IMDB Movies Analysis
+
 
 I have tried to gather the data using IMDBpy and have also taken help from a kaggle competition post.
 
@@ -52,7 +53,7 @@ The suggestion to Netflix would be to collect the movies from the IMDB that have
 
 
 
-# Summary of Project 5: Analysis of the Titanic Diaster
+# Project 5: Analysis of the Titanic Diaster
 
 Goal of the project: In this project we use the titanic passenger data (name, age, gender, social-ecominic status i.e. the PClass they were travelling in the ship) to predict who will survive the disaster and who will not survive the disaster. 
     
@@ -96,7 +97,7 @@ Based on the model we have tried to predict the chances of survival of a male of
 
 
 
-# Summary of Project 4: Salary Prediction for Data Professionals
+# Project 4: Salary Prediction for Data Professionals
 
 In this project we are trying to gauge the industry factors that influence the pay scale of professionals in the field of Data Science. This information is considered to be a valuable information for hiring firms. 
 
@@ -147,7 +148,7 @@ The model predicted that the probability of finding a position as a Data Analyst
 
 
 
-# Summary of Project 3 (Scenario 2)
+# Project 3: Market Analysis of Liquor Sales in Iowa
 
 My model analysis is based on the 10% dataset of the Iowa liquor sales. The original data set is very large so I have chosen to work with 10% of the data set which covers the data from Jan 2015 to March 2016. The data had some missing values which the dataframe interpreted as NaN. I preferred to drop the NaN labels for regression analysis. So there is a possibility of some missing information.
 
@@ -253,8 +254,7 @@ From all the above analysis, I would highly recommend opening stores in 77 numbe
 
 
 
-# Project 2: Bill Board Data Analysis 
-
+# Project 2: Bill Board Music Data Analysis 
 
 
 Bill Board is a music industry record chart for ranking the 100 most popular songs.
@@ -365,7 +365,7 @@ The histograms for math, verbal and rate reveal that we have a non-normal distri
 The scatter plot shows that the maximum math and verbal scores are at lower rates and as the rate increases, the math and verbal scores tend to drop. Hence the scores are inversely related to the rate.  
   
 
-    
+
 
 
 
