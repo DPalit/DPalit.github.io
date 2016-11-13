@@ -1,4 +1,4 @@
-# PROJECT 7: Airline Delay Analysis
+# Project 7: Airline Delay Analysis
 
 The aim of this project is to analyze the operations of major airports around the country and trying to figure out the factors that cause departure and operational flight delays from 2004 to 2014. 
 
