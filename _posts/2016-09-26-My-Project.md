@@ -1,3 +1,30 @@
+# PROJECT 7: Airline Delay Analysis
+
+The aim of this project is to analyze the operations of major airports around the country and trying to figure out the factors that cause departure and operational flight delays from 2004 to 2014. 
+
+I intend to conduct PCA analysis to figure out the factors leading to delays in arrival and departure delays in the airports.
+
+![](https://dpalit.github.io/images/project7_pairplot.png)
+
+It can be observed from the above plot that there is a correlation between  'average airborne delay' , 'average gate departure delay’ and 'average taxi time out’. 
+
+The following histogram plots of flight delays show that there is a positive skew in the distribution.
+
+ ![](https://dpalit.github.io/images/project7_fig1.png)
+
+![](https://dpalit.github.io/images/project7_fig2.png)
+
+![](https://dpalit.github.io/images/project7_fig3.png)
+
+The positive skew of 'average airborne delay' is relatively more compared to 'average gate departure delay' and 'average taxi time out'.
+
+| Features | Person’s correlation co-efficient  |
+|:-:|---|
+| Average taxi time out + Average Airborne Delay	| 0.56 |
+| Average Gate Departure Delay + Average Airborne Delay	| 0.4 |
+| Year + Average Airborne Delay | -0.2 |
+
+I would like to recommend FAA to invest in modernization because with the increase in modernization airlines delays are supposed to decrease.
 
 
 # Project 6: IMDB Movies Analysis
