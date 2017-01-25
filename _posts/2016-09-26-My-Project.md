@@ -1,4 +1,42 @@
+# Capstone Project: Probability of Accelerated Approval of Insurance Claims
 
+Link to the jupyter notebook: [Probability of Accelerated Approval of Insurance Claims](https://github.com/DPalit/GA-DSI/blob/master/projects/projects-capstone/part-05/Capstone_Final%20Report.ipynb)
+
+Link to the presentation : <a href=https://docs.google.com/presentation/d/19Ftz9oA0MKYr-654TIB_CI9ZXa3yUAVxh46qvcZz7js/edit#slide=id.g1a14c285b0_0_152>Capstone Slides</a>
+
+## Abstract
+
+The data is from an insurance claims management company. The dataset is anonymized because it is a proprietory data to protect privacy. It has two categories of claims:
+
+* claims that had an accelerated approval leading to faster payments
+* claims for which additional information was required before approval could be made i.e. no accelerated approval was present
+
+The train set contains the target column which has already been classified. The test set does not have the target column. In am attempt to figure out the best performing model, a train-test split of the train set has been performed.
+
+An attempt has been made to fit different tree based models on the train set. Logarithmic loss function has been used to compare the performance of the models. It has been observed that Extra Tree Classifer with a few set of parameters had the best performance with a logloss value of 0.46. The Extra Tree Clssifier model has been used to make predictions on the test set.
+
+## Problem Statement: 
+
+When unexpected events happen, people expect their insurer to support them as quickly as possible. Claims management department at the insurer need to check several things before a claim can be processed and payments can be made. Data Science can play an important role in this sector and make claims processing faster and easier.
+
+## Data Cleaning
+
+The data has two parts: Train and Test set.
+
+The train set has 133 columns in all. The 'target' column in the train set is the dependent variable which has been already been classified into 1 and 0 depending on whether the claims had an accelerated approval or not respectively. If the claim had an accelerated approval the 'target' value has been set to 1 and if the claim did not have an accelerated approval the target value has been set to 0.
+
+
+The train set has 131 columns which are the variables either of categorical or numeric type. All string type variables are categorical. It has been mentioned that the dataset doesnot contain any ordinal variables. 
+
+The test set contains 132 columns and does not have the target column. In this project, we would predict the  probability of each claim in the test set to have an accelerated approval.
+
+## Discussion
+
+* There is no fixed model that would perform equally well on every data set.
+* In classification problem, performance of a model can be analyzed from the log_loss value and the ROC curve
+* In this project, depending upon the log_loss value and the ROC curve, using the Extra Tree Classifier model is recommended.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Project 7: Airline Delay Analysis
 
