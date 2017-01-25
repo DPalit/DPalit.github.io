@@ -2,7 +2,7 @@
 
 Link to the jupyter notebook: [Probability of Accelerated Approval of Insurance Claims](https://github.com/DPalit/GA-DSI/blob/master/projects/projects-capstone/part-05/Capstone_Final%20Report.ipynb)
 
-Link to the presentation : <a href=https://docs.google.com/presentation/d/19Ftz9oA0MKYr-654TIB_CI9ZXa3yUAVxh46qvcZz7js/edit#slide=id.g1a14c285b0_0_152>Capstone Slides</a>
+Link to the presentation : [Capstone Slides](https://docs.google.com/presentation/d/19Ftz9oA0MKYr-654TIB_CI9ZXa3yUAVxh46qvcZz7js/edit#slide=id.p)
 
 ## Abstract
 
@@ -40,6 +40,8 @@ The test set contains 132 columns and does not have the target column. In this p
 
 # Project 7: Airline Delay Analysis
 
+Link to the jupyter notebook: [Airline Delay Analysis]()
+
 The aim of this project is to analyze the operations of major airports around the country and trying to figure out the factors that cause departure and operational flight delays from 2004 to 2014. 
 
 I intend to conduct PCA analysis to figure out the factors leading to delays in arrival and departure delays in the airports.
@@ -67,8 +69,11 @@ The positive skew of 'average airborne delay' is relatively more compared to 'av
 I would like to recommend FAA to invest in modernization because with the increase in modernization airlines delays are supposed to decrease.
 
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # Project 6: IMDB Movies Analysis
 
+Link to the jupyter notebook: [IMDB Movies Analysis](https://github.com/DPalit/GA-DSI/blob/master/projects/projects-weekly/project-06/project6_final.ipynb)
 
 I have tried to gather the data using IMDBpy and have also taken help from a kaggle competition post.
 
@@ -118,9 +123,12 @@ From feature selection, it can be observed that for the'imbd_score' the most inf
 The suggestion to Netflix would be to collect the movies from the IMDB that have high "number of voted users", high "movie budget" and "duration" of the movie is also a factor to look into.  
   
 
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Project 5: Analysis of the Titanic Disaster
 
 
-# Project 5: Analysis of the Titanic Diaster
+Link to the jupyter notebook: [Titanic Disaster Analysis](https://github.com/DPalit/GA-DSI/blob/master/projects/projects-weekly/project-05/Project5_Final.ipynb)
 
 Goal of the project: In this project we use the titanic passenger data (name, age, gender, social-ecominic status i.e. the PClass they were travelling in the ship) to predict who will survive the disaster and who will not survive the disaster. 
     
@@ -162,9 +170,11 @@ Lasso and Ridge regularization were performed on the model followed by gridsearc
 Based on the model we have tried to predict the chances of survival of a male of age 26yrs with a family size of 2 and travelling on a second class ticket. The model has predicted that the chances of survival of the passenger as 21%.  
   
 
-
+------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Project 4: Salary Prediction for Data Professionals
+
+Link to the jupyter notebook: [Salary Predictions for Data Professionals](https://github.com/DPalit/GA-DSI/blob/master/projects/projects-weekly/project-04/project4_final.ipynb)
 
 In this project we are trying to gauge the industry factors that influence the pay scale of professionals in the field of Data Science. This information is considered to be a valuable information for hiring firms. 
 
@@ -213,9 +223,11 @@ We tried to predict the salary of a Data Analyst in New York using the model.
 The model predicted that the probability of finding a position as a Data Analyst in New York with a pay (high) i.e. over 80K is 20%.  
   
 
-
+------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Project 3: Market Analysis of Liquor Sales in Iowa
+
+Link to the jupyter notebook: [Iowa Liquor Sales](https://github.com/DPalit/GA-DSI/blob/master/projects/projects-weekly/project-03/project3_Iowa_Liquor_Sales.ipynb)
 
 My model analysis is based on the 10% dataset of the Iowa liquor sales. The original data set is very large so I have chosen to work with 10% of the data set which covers the data from Jan 2015 to March 2016. The data had some missing values which the dataframe interpreted as NaN. I preferred to drop the NaN labels for regression analysis. So there is a possibility of some missing information.
 
@@ -318,10 +330,12 @@ The above plot shows the yearly sale in couty number 77. My model predicts a yea
 
 From all the above analysis, I would highly recommend opening stores in 77 number county in the state of Iowa.  
   
-
+------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 # Project 2: Bill Board Music Data Analysis 
+
+Link to the jupyter notebook: [Bill Board Music Data Analysis](https://github.com/DPalit/GA-DSI/blob/master/projects/projects-weekly/project-02/project_2.ipynb)
 
 
 Bill Board is a music industry record chart for ranking the 100 most popular songs.
@@ -409,10 +423,12 @@ So, we can observe that  even though ‘Higher’  was never in the number 1 pos
 From the bill board data I would presume Breathe and Kryptonite to be the most popular songs because they have secured a position among the top ten for the most number of weeks along with being one of the longest runnings in the bill board.  
   
 
-
+------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 # Project 1: Summary of the SAT Scores in the United States
+
+Link to the jupyter notebook: [SAT score Analysis](https://github.com/DPalit/GA-DSI/blob/master/projects/projects-weekly/project-01/starter-code/project_1.ipynb)
 
 The data presents the mean Math and Verbal scores in 51 different states in the United States. United Sates has 50 states but DC has been included as a state in the data and that changes the number of states as 51. The last column with the state abbreviation  “ALL” is not a state ; hence has not been included in numerical analysis.
 
