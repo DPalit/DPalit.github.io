@@ -1,3 +1,7 @@
+
+
+
+
 # Capstone Project: Probability of Accelerated Approval of Insurance Claims
 
 Link to the jupyter notebook: [Probability of Accelerated Approval of Insurance Claims](https://github.com/DPalit/GA-DSI/blob/master/projects/projects-capstone/part-05/Capstone_Final%20Report.ipynb)
@@ -40,7 +44,7 @@ The test set contains 132 columns and does not have the target column. In this p
 
 # Project 7: Airline Delay Analysis
 
-Link to the jupyter notebook: [Airline Delay Analysis]()
+Link to the jupyter notebook: [Airline Delay Analysis](https://github.com/DPalit/GA-DSI/blob/master/projects/projects-weekly/project-07/starter-code/Airport%20Delay%20Analysis.ipynb)
 
 The aim of this project is to analyze the operations of major airports around the country and trying to figure out the factors that cause departure and operational flight delays from 2004 to 2014. 
 
