@@ -3,7 +3,7 @@
 
 # Capstone Project: Probability of Accelerated Approval of Insurance Claims
 
-Link to the jupyter notebook: [Probability of Accelerated Approval of Insurance Claims](https:///github.com/DPalit/GA-DSI/blob/master/projects/projects-capstone/part-05/Capstone_Final%20Report.ipynb)
+Link to the jupyter notebook: [Probability of Accelerated Approval of Insurance Claims]
 
 Link to the presentation : [Capstone Slides](https://docs.google.com/presentation/d/19Ftz9oA0MKYr-654TIB_CI9ZXa3yUAVxh46qvcZz7js/edit#slide=id.p)
 
@@ -43,7 +43,7 @@ The test set contains 132 columns and does not have the target column. In this p
 
 # Project 7: Airline Delay Analysis
 
-Link to the jupyter notebook: [Airline Delay Analysis](https://github.com/DPalit/GA-DSI/blob/master/projects/projects-weekly/project-07/starter-code/Airport%20Delay%20Analysis.ipynb)
+Link to the jupyter notebook: [Airline Delay Analysis]
 
 The aim of this project is to analyze the operations of major airports around the country and trying to figure out the factors that cause departure and operational flight delays from 2004 to 2014. 
 
@@ -76,7 +76,7 @@ I would like to recommend FAA to invest in modernization because with the increa
 
 # Project 6: IMDB Movies Analysis
 
-Link to the jupyter notebook: [IMDB Movies Analysis](https://github.com/DPalit/GA-DSI/blob/master/projects/projects-weekly/project-06/project6_final.ipynb)
+Link to the jupyter notebook: [IMDB Movies Analysis]
 
 I have tried to gather the data using IMDBpy and have also taken help from a kaggle competition post.
 
@@ -131,7 +131,7 @@ The suggestion to Netflix would be to collect the movies from the IMDB that have
 # Project 5: Analysis of the Titanic Disaster
 
 
-Link to the jupyter notebook: [Titanic Disaster Analysis](https://github.com/DPalit/GA-DSI/blob/master/projects/projects-weekly/project-05/Project5_Final.ipynb)
+Link to the jupyter notebook: [
 
 Goal of the project: In this project we use the titanic passenger data (name, age, gender, social-ecominic status i.e. the PClass they were travelling in the ship) to predict who will survive the disaster and who will not survive the disaster. 
     
@@ -177,7 +177,7 @@ Based on the model we have tried to predict the chances of survival of a male of
 
 # Project 4: Salary Prediction for Data Professionals
 
-Link to the jupyter notebook: [Salary Predictions for Data Professionals](https://github.com/DPalit/GA-DSI/blob/master/projects/projects-weekly/project-04/project4_final.ipynb)
+Link to the jupyter notebook: 
 
 In this project we are trying to gauge the industry factors that influence the pay scale of professionals in the field of Data Science. This information is considered to be a valuable information for hiring firms. 
 
@@ -230,7 +230,7 @@ The model predicted that the probability of finding a position as a Data Analyst
 
 # Project 3: Market Analysis of Liquor Sales in Iowa
 
-Link to the jupyter notebook: [Iowa Liquor Sales](https://github.com/DPalit/GA-DSI/blob/master/projects/projects-weekly/project-03/project3_Iowa_Liquor_Sales.ipynb)
+Link to the jupyter notebook: 
 
 My model analysis is based on the 10% dataset of the Iowa liquor sales. The original data set is very large so I have chosen to work with 10% of the data set which covers the data from Jan 2015 to March 2016. The data had some missing values which the dataframe interpreted as NaN. I preferred to drop the NaN labels for regression analysis. So there is a possibility of some missing information.
 
@@ -338,7 +338,7 @@ From all the above analysis, I would highly recommend opening stores in 77 numbe
 
 # Project 2: Bill Board Music Data Analysis 
 
-Link to the jupyter notebook: [Bill Board Music Data Analysis](https://github.com/DPalit/GA-DSI/blob/master/projects/projects-weekly/project-02/project_2.ipynb)
+Link to the jupyter notebook: 
 
 
 Bill Board is a music industry record chart for ranking the 100 most popular songs.
@@ -431,7 +431,7 @@ From the bill board data I would presume Breathe and Kryptonite to be the most p
 
 # Project 1: Summary of the SAT Scores in the United States
 
-Link to the jupyter notebook: [SAT score Analysis](https://github.com/DPalit/GA-DSI/blob/master/projects/projects-weekly/project-01/starter-code/project_1.ipynb)
+Link to the jupyter notebook: 
 
 The data presents the mean Math and Verbal scores in 51 different states in the United States. United Sates has 50 states but DC has been included as a state in the data and that changes the number of states as 51. The last column with the state abbreviation  “ALL” is not a state ; hence has not been included in numerical analysis.
 
