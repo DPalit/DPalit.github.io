@@ -3,7 +3,7 @@
 
 # Capstone Project: Probability of Accelerated Approval of Insurance Claims
 
-Link to the jupyter notebook: [Probability of Accelerated Approval of Insurance Claims](https://github.com/DPalit/GA-DSI/blob/master/projects/projects-capstone/part-05/Capstone_Final%20Report.ipynb)
+Link to the jupyter notebook: [Probability of Accelerated Approval of Insurance Claims](https:///github.com/DPalit/GA-DSI/blob/master/projects/projects-capstone/part-05/Capstone_Final%20Report.ipynb)
 
 Link to the presentation : [Capstone Slides](https://docs.google.com/presentation/d/19Ftz9oA0MKYr-654TIB_CI9ZXa3yUAVxh46qvcZz7js/edit#slide=id.p)
 
